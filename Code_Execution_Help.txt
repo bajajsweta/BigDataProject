@@ -1,0 +1,32 @@
+Code execution steps for each algorithm implemented 
+
+Mahout Recommendation :
+1.Inside the package of the recommendation , execute the mahout.sh shell script on the hadoop folder 
+2.Place the 2 mahout jars and the mahout recommendation jar inside the hadoop folder 
+3 run the shell scipts and the output will be generated in the hdfs .
+4 total of 6 map reduce jobs running with the mahout recommendation engine .
+
+
+Sentimental Analysis :
+1.Place the jar inside the mahout library along with all the jars of the the NLP core .
+2.Execute the jar which require parameters as : hadoop jar sentimental_both.jar Runner_Stanfard /review /output1 /output2 /sentimental_top3
+Here  we have review as the datasource and output1 , output2 as the intermedidate outputs then the sentimental_top3 as the final output .
+3. The job partitions the data on the base of the length of the review and executes the jobs in parallel .
+
+Market Basket :
+1. Place the market basket jar inside the hadoop folder and execute the following command :
+hadoop jar market_basket.jar Cloud.ApacheLog.Runner /MarketData /output1 /output2 /market_Output
+Here 3 jobs are running with intermedidate output as output1 , output2 and the final result is in market_output and MarketData is the hdfs input file path .
+
+RScripts :
+1.There are 2 projects inside the scipts , one on user/item recommendation and the other on the market basket analysis .
+2.Place the input file and launch the project on the R studio with the input files in the directory .
+
+Logistic Regression :
+1.Place the mahout jar in the hadoop folder and execute the mahout logistic command on the terminal as :
+training command : bin/mahout org.apache.mahout.classifier.sgd.TrainLogistic --passes 10 --rate 50 --lambda 0.1 --input /Users/ruchirapatil/Downloads/queryresult9.csv --features 21 --output /Users/ruchirapatil/Downloads/queryresult9.model --target overallrating --categories 2 --predictors price categorynumber salesrank --types n n
+Testing command : bin/mahout org.apache.mahout.classifier.sgd.RunLogistic --input /Users/ruchirapatil/Downloads/combovideogamescellphone.csv --model /Users/ruchirapatil/Downloads/combovideogamescellphone.model --auc --scores --confusion
+
+Hue/Hive Scipts:
+1. Load the data into the tables of the Amazon hue clustor 
+2. Run the commands on the editor .
