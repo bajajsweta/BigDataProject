@@ -54,10 +54,14 @@ public class Reducer1 extends MapReduceBase implements Reducer<Text, Text, Text,
        	  String[] data3=p1.toString().split(":");
    		  String product=data3[0].trim();
    		  String rating=data3[1];
+   		  
+   		  String[] data4=p2.toString().split(":");
+   		  String product1=data4[0].trim();
+   		  String rating1=data4[1];
     		System.out.println(product);
     		System.out.println(p2.toString());
     		 
-    			 output.collect(new Text(product.trim()),new Text(p2.toString().trim()));  
+    			 output.collect(new Text(product.trim()+" "+product1),new Text(rating1));  
  }
 	}
 	}

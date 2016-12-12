@@ -37,7 +37,7 @@ public class Runner {
       conf2.setMapperClass(Mapper2.class);
       
       conf2.setMapOutputKeyClass(Text.class);
-      conf2.setMapOutputValueClass(Text.class);
+      conf2.setMapOutputValueClass(IntWritable.class);
       
       conf2.setReducerClass(Reducer2.class);
       //conf2.setOutputKeyComparatorClass(SortKeyComparator.class);
@@ -50,6 +50,21 @@ public class Runner {
 
    
          JobClient.runJob(conf2);
+         
+         JobConf conf3 = new JobConf(Runner.class);
+         conf3.setJobName("MapReduce3");
+         
+         conf3.setMapperClass(Mapper3.class);
+         
+         conf3.setMapOutputKeyClass(Text.class);
+         conf3.setMapOutputValueClass(Text.class);
+         
+         conf3.setReducerClass(Reducer3.class);
+         
+         FileInputFormat.setInputPaths(conf3, new Path("output2"));
+         FileOutputFormat.setOutputPath(conf3, new Path("output3"));
+         
+            JobClient.runJob(conf3);
          
          
         

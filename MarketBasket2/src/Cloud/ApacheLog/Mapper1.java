@@ -57,7 +57,7 @@ implements Mapper<LongWritable, Text, Text, Text> {
 		}
 		catch(Exception e)
 		{
-			
+			System.out.print("Exception"+e.getMessage());
 		}
 		  
 		  //String matrixName = matrixData[0].trim();
