@@ -191,7 +191,7 @@ public class Runner {
 	    	String rating =data[4];
 	    	int newUser;
 	    	int newProduct;
-	    	if(rating.length()==1)
+	    	if(rating.length()==1 && !rating.equals("?"))
 	    	{
 	    	if(userID.containsKey(reviwer))
 	    	{
@@ -581,7 +581,7 @@ job5.setOutputValueClass(NullWritable.class);
 
 FileInputFormat.addInputPath(job5, new Path(args[0]));
 FileOutputFormat.setOutputPath(job5, new Path(args[1])); 
-//JobClient.runJob(job5);
+JobClient.runJob(job5);
 
 
 JobConf job3 = new JobConf(Runner.class);
@@ -600,7 +600,7 @@ JobClient.runJob(job3);
 JobConf job4 = new JobConf(Runner.class);
 job4.setJobName("ip-count");
 job4.setJarByClass(Runner.class);
-MultipleInputs.addInputPath(job4, new Path(args[2]), TextInputFormat.class, UserJoinMapper.class);
+MultipleInputs.addInputPath(job4, new Path(args[3]), TextInputFormat.class, UserJoinMapper.class);
 MultipleInputs.addInputPath(job4, new Path(args[4]), TextInputFormat.class, CommentJoinMapper2.class);
 job4.setReducerClass(UserJoinReducer2.class);
 
@@ -609,5 +609,6 @@ TextOutputFormat.setOutputPath(job4, new Path(args[5]));
 job4.setOutputKeyClass(Text.class);
 job4.setOutputValueClass(Text.class);
 JobClient.runJob(job4);
+
   }
 }
