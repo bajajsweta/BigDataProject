@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481524290284.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "437EF5F2",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1481524290284,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A68DE7D2",
+        "caption" : "cellPhone_sentiments",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=cellPhone_sentiments&cache_key=A68DE7D2",
+        "displayedObservations" : "11271",
+        "environment" : "",
+        "object" : "cellPhone_sentiments",
+        "preview" : "0",
+        "totalObservations" : "11271",
+        "variables" : "4"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481532222999.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BBBA826",
+    "lastKnownWriteTime" : 30399714103787585,
+    "last_content_update" : 1481532222999,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "6CBB7BC6",
+        "caption" : "semtimental_byYear_",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=semtimental_byYear_&cache_key=6CBB7BC6",
+        "displayedObservations" : 26971,
+        "environment" : "",
+        "object" : "semtimental_byYear_",
+        "preview" : 0,
+        "totalObservations" : 26971,
+        "variables" : 5
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "###########Normalize#################################################\n\nnormalize <- function(x) {\n  return ((x - min(x)) / (max(x) - min(x)))\n}\n\ndfNorm <- as.data.frame(lapply(X6_categories[2:5], normalize))\n\ngetwd()\nwrite.csv(dfNorm,file =\"normalized_logistic.csv\")\n\n\n######################################################################\n\n",
+    "created" : 1481517324067.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2770885897",
+    "id" : "8DAD7479",
+    "lastKnownWriteTime" : 1481524293,
+    "last_content_update" : 1481524293793,
+    "path" : "H:/Big Data Project/Analysis/Normalized_Logistic_Regression.R",
+    "project_path" : "Normalized_Logistic_Regression.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(ggplot2)\n\ncolnames(cellPhone_sentiments) <- c(\"itemid\",\"sentiment\",\"reviewNumber\",\"AverageRating\")\n\nsentiment_set1 <- cellPhone_sentiments %>%\n                   group_by(sentiment) %>%\n                   select(sentiment) %>%\n                   summarise(count = n())\n\nsentiment_set1 <- as.matrix(sentiment_set1)\ncolours <- c(\"red\", \"yellow\", \"green\")\nbarplot(sentiment_set1$count,main=\"Sentiment Analysis\", xlab=\"Sentiments\", ylab=\"Count\", names.arg=c(\"Negative\",\"Neutral\",\"Positive\"))\n\nsentiment_set2 <- cellPhone_sentiments %>%\n                  group_by(reviewNumber,sentiment) %>%+\n                  summarise(count = n())\n\nhist(cellPhone_sentiments$AverageRating, col = \"green\")\n\n\nsentiment_set2 <- cellPhone_sentiments %>%\n  group_by(reviewNumber,sentiment) %>%\n  summarise(count = n())\n\nSentiment_set3 <- semtimental_byYear_ %>%\n  select(X1,X2)\n\nSentiment_set4 <- Sentiment_set3 %>%\n                  filter(X1 > \"2005\") %>%\n                  group_by(X1,X2) %>%\n                  dplyr::summarise(count = n()) %>%\n                  arrange(desc(X1),desc(count))\n\n\n#Unstacked Bars\np1 <- Sentiment_set4 %>%\n  ggplot() + \n  aes(x = as.factor(X1),y = count, fill = as.factor(X2)) +\n  labs(title =\"Sentiments over the years\", x = \"Year\", y = \"Sentiment Count\") +\n  geom_bar(stat=\"identity\",position = 'dodge') +\n  scale_fill_discrete(name=\"Sentiments\")\n\ninstall.packages(\"gridExtra\")\nrequire(\"gridExtra\")\ngrid.arrange(arrangeGrob(p1))\n\n\ninstall.packages(\"corrplot\")\nlibrary(corrplot)\nset1 <- as.matrix(semtimental_byYear_)\ncorrplot(set1,adis.corr = FALSE, method = \"square\")\n\nM <- matrix(rnorm(64), nrow=8, ncol=8) \nM\n",
+    "created" : 1481524299456.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2817115397",
+    "id" : "59D71ACF",
+    "lastKnownWriteTime" : 1481548532,
+    "last_content_update" : 1481548532919,
+    "path" : "H:/Big Data Project/Analysis/Sentimental_Anaysis.R",
+    "project_path" : "Sentimental_Anaysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

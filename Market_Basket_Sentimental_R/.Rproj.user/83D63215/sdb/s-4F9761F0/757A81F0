@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# if you haven't installed plyr, delete the # and run this line:\n# install.packages(\"plyr\")\n\nlibrary(plyr)\n\n# first we use plyr to calculate the mean rating and SE for each product\nratingdat <- ddply(cellPhone_sentiments, c(\"itemid\"), summarise,\n                   M = mean(AverageRating, na.rm=T),\n                   SE = sd(AverageRating, na.rm=T)/sqrt(length(na.omit(AverageRating))),\n                   N = length(na.omit(AverageRating)))\n\n# make story into an ordered factor, ordering by mean rating:\nratingdat$itemid <- factor(ratingdat$itemid)\nratingdat$itemid <- reorder(ratingdat$itemid, ratingdat$M)\n\n# take a look at our handiwork:\n\n# Now open a connection to a pdf file\npdf(file=\"dotplot-story-rating.pdf\", height=14, width=8.5)\n\nggplot(ratingdat, aes(x = M, xmin = M-SE, xmax = M+SE, y = story )) +\n  geom_point() + geom_segment( aes(x = M-SE, xend = M+SE,\n                                   y = story, yend=story)) +\n  theme_bw() + opts(axis.title.x = theme_text(size = 12, vjust = .25))+\n  xlab(\"Mean rating\") + ylab(\"Story\") +\n  opts(title = expression(\"Rating article by Story, with SE\"))\n\n\nggplot(ratingdat, aes(x = M, xmin = M-SE, xmax = M+SE, y = itemid )) +\n  geom_point() + geom_segment( aes(x = M-SE, xend = M+SE, y = itemid, yend=itemid)) +\n  xlab(\"Mean rating\") + ylab(\"Story\") +\n  \ndev.off()\n",
+    "created" : 1481501220831.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2134625323",
+    "id" : "757A81F0",
+    "lastKnownWriteTime" : 1481531178,
+    "last_content_update" : 1481531570248,
+    "path" : "H:/Big Data Project/Analysis/script2_neo4j.R",
+    "project_path" : "script2_neo4j.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

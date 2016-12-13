@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#########################################################################################################\n############################# Market Basket by R ########################################################\n#########################################################################################################\n\nlibrary(\"arules\")\ni <- split(MarketBasket$sku1,MarketBasket$sku2, MarketBasket$TransactionId)\nhead(i)\ntxn <- as(i, \"transactions\")\nbasket_rules <- apriori(txn, parameter = list(sup = 0.005, conf = 0.01, target=\"rules\"))\ntxn\nitemFrequencyPlot(txn, topN = 25)\ninspect(head(sort(basket_rules),100))\nbasket_rules_broad <- apriori(txn, parameter = list(sup = 0.001, conf = 0.001, target=\"rules\"))\ninspect(head(sort(basket_rules_broad, by=\"lift\"),20))\nlibrary(\"arulesViz\")\nplot(basket_rules_broad)\n",
+    "created" : 1481549307928.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "568399600",
+    "id" : "1A7EA510",
+    "lastKnownWriteTime" : 1481551044,
+    "last_content_update" : 1481551044277,
+    "path" : "H:/Big Data Project/Analysis/Market_BasketAnalysis.R",
+    "project_path" : "Market_BasketAnalysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 14,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

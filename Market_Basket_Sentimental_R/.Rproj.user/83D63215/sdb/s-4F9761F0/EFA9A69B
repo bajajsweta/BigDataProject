@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481550850253.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EFA9A69B",
+    "lastKnownWriteTime" : 21392493373358196,
+    "last_content_update" : 1481550850253,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7448B5C2",
+        "caption" : "MarketBasket",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=MarketBasket&cache_key=7448B5C2",
+        "displayedObservations" : 335680,
+        "environment" : "",
+        "object" : "MarketBasket",
+        "preview" : 0,
+        "totalObservations" : 335680,
+        "variables" : 3
+    },
+    "relative_order" : 15,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

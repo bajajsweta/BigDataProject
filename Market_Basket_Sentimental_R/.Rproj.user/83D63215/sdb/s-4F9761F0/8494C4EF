@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481532360454.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8494C4EF",
+    "lastKnownWriteTime" : 2986858995373664628,
+    "last_content_update" : 1481532360454,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7EC0BF0F",
+        "caption" : "Sentiment_set3",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Sentiment_set3&cache_key=7EC0BF0F",
+        "displayedObservations" : "26971",
+        "environment" : "",
+        "object" : "Sentiment_set3",
+        "preview" : "0",
+        "totalObservations" : "26971",
+        "variables" : "2"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
