@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n# This is a Shiny web application. You can run the application by clicking\n# the 'Run App' button above.\n#\n# Find out more about building applications with Shiny here:\n#\n#    http://shiny.rstudio.com/\n#\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui <- fluidPage( \n   \n   # Application title\n   titlePanel(\"User Based Recommendation Engine\"),\n   \n   # Sidebar with a slider input for number of bins \n   sidebarLayout(\n      sidebarPanel(\n        selectInput(inputId = \"var1\", \n                    label = \"Choose a User to display Recommendations\",\n                    choices = row.names(Amazon_Video_2000_matrix_scores_holder),\n                    selected = \"A136YD08SCJ2LV\")\n      ),\n      \n      # Show a plot of the generated distribution\n      mainPanel(\n        tableOutput(\"table1\")\n      )\n   )\n )\n\n# Define server logic required to draw a table\nserver <- function(input, output){\n      output$table1 <- renderTable({ \n       ##for(var1 in rownames(Amazon_Video_2000_matrix_scores_holder))\n         ##{\n         Amazon_Video_2000_matrix_scores_holder[i,]\n        ## }\n     })\n }\n\n# Run the application \nshinyApp(ui = ui, server = server)\n\n",
+    "created" : 1481189686336.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "436129829",
+    "id" : "6C1EE135",
+    "lastKnownWriteTime" : 1481199629,
+    "last_content_update" : 1481199629294,
+    "path" : "H:/Big Data Project/Amazon_New/Recommendation_engine/app.R",
+    "project_path" : "Recommendation_engine/app.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

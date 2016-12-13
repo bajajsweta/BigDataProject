@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481527080578.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B9EBD1C7",
+    "lastKnownWriteTime" : 206432520,
+    "last_content_update" : 1481527080578,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "84421C2E",
+        "caption" : "Video_matrix_neighbours_1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Video_matrix_neighbours_1&cache_key=84421C2E",
+        "displayedObservations" : 176,
+        "environment" : "",
+        "object" : "Video_matrix_neighbours_1",
+        "preview" : 0,
+        "totalObservations" : 176,
+        "variables" : 7
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
